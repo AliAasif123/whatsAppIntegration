@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  spring-app:
+    image: my-new-app:latest
+    container_name: spring-app-container
+    ports:
+      - "9091:8080"  # Change host port from 8080 to 9091
+    environment:
+      SPRING_DATA_MONGODB_URI: "mongodb+srv://mongodbuser:WyrMq0goUbpIEyHb@cluster-0.wqam8zz.mongodb.net/hyp_backend_mdb"
+      FTP_SERVER: "ftp.noubabarandkitchen.in"
+      FTP_PORT: "21"
+      FTP_USER: "najeeb@noubabarandkitchen.in"
+      FTP_PASSWORD: "uY!BkWdAA3}s"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo-container
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

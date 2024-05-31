@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "ftp.port",
+    "type": "java.lang.String",
+    "description": "A description for 'ftp.port'"
+  },
+  {
+    "name": "ftp.server",
+    "type": "java.lang.String",
+    "description": "A description for 'ftp.server'"
+  },
+  {
+    "name": "ftp.password",
+    "type": "java.lang.String",
+    "description": "A description for 'ftp.password'"
+  },
+  {
+    "name": "ftp.user",
+    "type": "java.lang.String",
+    "description": "A description for 'ftp.user'"
+  }
+]}
